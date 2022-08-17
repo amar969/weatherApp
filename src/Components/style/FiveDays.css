@@ -1,0 +1,41 @@
+.container{
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #FFF;
+    width: 98%;
+    font-size: 20px;
+    appearance: none;
+    border:none;
+    outline:  none;
+    background:  none;
+    border-radius:  16px;
+    box-shadow:  0px 0px 8px rgba(0, 0, 0, 0.25);
+    transition:  0.5s;
+    padding:  8px 18px;
+    justify-content:  space-between;
+    margin:  50px 10px;
+    align-items: center;
+    margin-top:  100px;
+}
+
+.graphContainer{
+    width: 80%;
+    height: 100%; 
+    align-items: center; 
+    justify-content: center; 
+    margin-left:50px;
+}
+
+@media (max-width:450px) {
+    .container{
+        grid-template-columns: repeat(1, 1fr);
+        margin:  20px 10px;
+        font-size: 18px;
+        padding:  5px 5px;
+        width: 94%;
+    }
+    
+    .graphContainer{
+        margin: auto;
+    }
+}

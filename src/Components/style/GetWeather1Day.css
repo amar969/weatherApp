@@ -1,0 +1,46 @@
+.single-day-weeather-container{
+    display: grid;
+    margin-top:20px;
+    grid-template-columns:repeat(1,1fr);
+}
+
+.single-day-main-container{
+    margin: 10px; 
+}
+
+.pressure{
+    margin-top:20px; 
+    background-color:rgba(127, 196, 233, 0.281); 
+    display: flex; 
+    flex-direction: column; 
+    align-items:center; 
+    justify-content:center;
+    padding: 10px;
+    text-align: left;
+}
+
+h1{
+    font-size: 50px;
+}
+
+@media (max-width: 450px) {
+     h1{
+         font-size: 30px;
+     }
+
+     .single-day-weeather-container{
+        display: grid;
+        margin-top:5px;
+        grid-template-columns:repeat(1,1fr);
+    }
+
+     .pressure{
+        margin-top:5px; 
+        padding: 5px;
+        text-align: left;
+     }
+
+     .single-day-main-container{
+        margin: 5px; 
+    }
+}
