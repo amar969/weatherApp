@@ -47,7 +47,7 @@ export const GetWeather1Day = () => {
     <div className="single-day-main-container">
       {loading ? (
         <div className="single-day-weeather-container">
-          {/* <Box
+          <Box
             sx={{
               display: "flex",
               width: "50%",
@@ -57,7 +57,7 @@ export const GetWeather1Day = () => {
           >
             {" "}
             {weather.name}{" "}
-          </Box> */}
+          </Box>
           <Box
             sx={{
               display: "grid",

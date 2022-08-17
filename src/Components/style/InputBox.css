@@ -18,6 +18,10 @@
     opacity: 20;
 }
 
+.searchResult:hover{
+    background-color: darkgray;
+}
+
 .inputContainer{
     display: flex;
     background-color: #FFF;

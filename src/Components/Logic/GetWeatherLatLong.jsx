@@ -28,7 +28,7 @@ export const GetWeatherLatLong = () => {
         }&lon=${coords[coords.length - 1].long}&appid=${API_KEY}&units=metric`
       );
       let data = await res.json();
-      console.log(data);
+      //console.log(data);
       let weather = [];
       for (let i = 0; i < data.list.length; i += 8) {
         weather.push(data.list[i]);
