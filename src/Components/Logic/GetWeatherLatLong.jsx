@@ -185,7 +185,7 @@ export const GetWeatherLatLong = () => {
                 )}
 
                 {/* <img src={`http://openweathermap.org/img/wn/${item.weather[0].icon}.png`} style={{ width: "40px" }} alt="icons" /> */}
-                <p> {item.weather[0].description} </p>
+                <p > {item.weather[0].description} </p>
               </div>
             );
           })}

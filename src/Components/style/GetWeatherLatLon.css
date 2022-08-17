@@ -14,10 +14,11 @@
 @media (max-width: 450px ) {
     .fiveDayContainer{
         font-size: 13px;
-        gap: 5px;
+        gap: 15px;
     }
 
     .fiveDayContainer svg {
         font-size: 30px;
     }
+
 }

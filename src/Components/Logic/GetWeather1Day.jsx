@@ -55,8 +55,8 @@ export const GetWeather1Day = () => {
               justifyContent: "center",
             }}
           >
-            {" "}
-            {weather.name}{" "}
+            {/* {" "}
+            {weather.name}{" "} */}
           </Box>
           <Box
             sx={{

@@ -81,7 +81,7 @@ export const InputBox = () => {
     const timeOut = setTimeout(() => {
       textToLat();
       getWeather2();
-      getWeather1();
+       getWeather1();
     }, 100);
     return () => {
       clearTimeout(timeOut);
