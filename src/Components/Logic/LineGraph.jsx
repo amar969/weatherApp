@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { API_KEY } from "./GetWeatherLatLong";
 import React from "react";
+import moment from "moment";
 
 import {
   Chart as ChartJS,
@@ -28,6 +29,11 @@ export const LineGraph = () => {
   const { coords } = useSelector((state) => state);
   const [fiveData, setFiveData] = React.useState([]);
 
+
+  const epochToDate = (targetDate) => {
+    return moment.unix(targetDate).format("h a");
+  };
+
   const getWeather5Days = async () => {
     try {
       let res = await fetch(
@@ -39,7 +45,7 @@ export const LineGraph = () => {
       for (let i = 0; i < 10; i++) {
         weather.push(data.list[i]);
         setFiveData(weather);
-        //console.log(data.list[i])
+        console.log(data.list[i])
       }
     } catch (error) {
       console.log(error);
@@ -52,21 +58,21 @@ export const LineGraph = () => {
 
   let temp = [];
   fiveData.map((item) => {
-    temp.push(Math.round(item.main.temp ));
+    temp.push({temp: Math.round(item.main.temp ), date: item.dt });
   });
 
-  const labels = temp.map((item) => item + "°");
+  const labels = temp.map((item) => item.temp + "° " + (epochToDate(item.date)) );
   const data = {
     labels,
     datasets: [
       {
         label: "Weather Forcast",
-        data: temp,
+        data: temp.map((item) => item.temp),
         //labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
         borderColor: "skyblue",
         backgroundColor: "white",
-        pointRadius: 5,
-        borderWidth: 5,
+        pointRadius: 3,
+        borderWidth: 2,
         fontWeight: "bold", 
       },
     ],
